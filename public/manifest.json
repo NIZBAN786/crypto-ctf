@@ -1,0 +1,85 @@
+
+{
+  "challenges": [
+    {
+      "id": "classical-cipher",
+      "title": "Ancient Whispers",
+      "difficulty": "Beginner",
+      "points": 100,
+      "description": "A classic polyalphabetic cipher is hiding a secret. The key is a common word in the field of cryptography. Can you decrypt the message? The flag is the plaintext.",
+      "files": ["classical_cipher.txt"],
+      "hints": ["The cipher is named after a French diplomat, Blaise de Vigenère.", "The key is 'CRYPTO'."],
+      "is_fake": false
+    },
+    {
+      "id": "two-time-pad",
+      "title": "Keystream Collision",
+      "difficulty": "Intro",
+      "points": 200,
+      "description": "A one-time pad is perfectly secure, but only if the key is never reused. These two messages were encrypted with the same key. Exploit this vulnerability to find one of the original messages.",
+      "files": ["otp_cipher1.txt", "otp_cipher2.txt"],
+      "hints": ["XORing the two ciphertexts together will cancel out the key.", "The result of XORing the ciphertexts is the XOR of the two plaintexts.", "Use crib dragging or statistical analysis on the plaintext XOR to recover one of the messages."],
+      "is_fake": false
+    },
+    {
+      "id": "weak-rsa",
+      "title": "Small Exponent",
+      "difficulty": "Intermediate",
+      "points": 300,
+      "description": "RSA is secure with proper parameters, but what happens when the public exponent 'e' is very small, like 3? If the original message 'm' is also small, 'm^e' might be less than the modulus 'n', making the encryption reversible.",
+      "files": ["rsa_challenge.json"],
+      "hints": ["If m^3 < n, then c = m^3. You can recover 'm' by taking the cube root of the ciphertext 'c'.", "You can use an online calculator or a simple script to find the integer cube root of a large number."],
+      "is_fake": false
+    },
+    {
+      "id": "hash-len-ext",
+      "title": "Malleable MAC",
+      "difficulty": "Advanced",
+      "points": 400,
+      "description": "A server uses a MAC scheme like H(key || message) to authenticate API requests. This construction is vulnerable to length extension attacks if H is a Merkle–Damgård hash function like SHA-1 or MD5. Find the flag hidden in this hypothetical scenario.",
+      "files": ["hash_scenario.md"],
+      "hints": ["The goal of a length extension attack is to compute H(key || message || padding || new_data) without knowing the key.", "You can use tools like `hashpump` to craft the new signature and data.", "The flag format itself gives you a hint about what you're trying to achieve."],
+      "is_fake": false
+    },
+    {
+      "id": "decoy-one",
+      "title": "Rabbit Hole",
+      "difficulty": "Trivial",
+      "points": 10,
+      "description": "Sometimes, the easiest flags are not the ones you're looking for. This one seems too obvious.",
+      "files": ["decoy1.txt"],
+      "hints": ["This looks like a flag...", "But is it a REAL flag?"],
+      "is_fake": true
+    },
+    {
+      "id": "decoy-two",
+      "title": "Red Herring",
+      "difficulty": "Trivial",
+      "points": 10,
+      "description": "A distraction, meant to mislead. Don't waste too much time here.",
+      "files": ["decoy2.txt"],
+      "hints": ["Focus on the real crypto challenges."],
+      "is_fake": true
+    },
+    {
+      "id": "decoy-three",
+      "title": "Wrong Turn",
+      "difficulty": "Trivial",
+      "points": 10,
+      "description": "You've stumbled upon a dead end. The prize is elsewhere.",
+      "files": ["decoy3.txt"],
+      "hints": ["Check the challenge description carefully on the main page."],
+      "is_fake": true
+    },
+    {
+      "id": "decoy-four",
+      "title": "Fool's Gold",
+      "difficulty": "Trivial",
+      "points": 10,
+      "description": "All that glitters is not gold. This flag holds no value for the master key.",
+      "files": ["decoy4.txt"],
+      "hints": ["The master assembler will only work with the four true flags."],
+      "is_fake": true
+    }
+  ]
+}

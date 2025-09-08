@@ -1,0 +1,5 @@
+{
+  "name": "Crypto CTF",
+  "description": "A client-side, educational Capture The Flag (CTF) platform focused on cryptography challenges. Solve puzzles, find flags, and assemble the master flag, all within your browser.",
+  "requestFramePermissions": []
+}
